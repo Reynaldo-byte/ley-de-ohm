@@ -11,25 +11,24 @@
       <img src="recursos/img-foot.png" alt="logo: escuela nueva">
     </div>
 	<script src="script.js"></script>
-	<div id="contenido" style="width:80%; height: 40rem">
-		<div id="encabezado" >Circuitos:Ley de Ohm<br><button id="siguiente" onclick="empezar()" >Siguiente ➤➤</button>
 		    <div id="aviso-movil-horizontal">
 			<p> Para disfrutar de una mejor experiencia rota tu dispositivo</p>
     <img src="recursos/rotate.gif"/>
-</div></div>
+	<div id="contenido" onmouseover="audio2.play();audio2.loop='true'">
+		<div id="encabezado" >Circuitos:Ley de Ohm<br><button id="siguiente" onclick="empezar()" >Siguiente ➤➤</button></div>
 		<div id="menu" hidden>
-			<div id="mixto" class="circuito"><p class="titulo">Circuito Mixto</p><img id="img_mixto" src="recursos/mixto_1.png" width="15%" onmouseover="mensaje_mixto();sound()" onmouseout="mensaje_mixto2()" onclick="cargar_mixto()" onclick="cargar_mixto()"></div>
-			<div id="paralelo" class="circuito"><p class="titulo">Circuito en Paralelo</p><img id="img_paralelo" src="recursos/paralelo_1.png" width="15%" onmouseover="mensaje_paralelo() ; sound()" onmouseout="mensaje_paralelo2()" onclick="cargar_paralelo()"></div>
-			<div id="serie" class="circuito"><p class="titulo">Circuito en Serie</p><img id="img_serie" src="recursos/serie_1.png" onmouseover="mensaje_serie(); sound();" width="15%" onmouseout="mensaje_serie2()" onclick="cargar_serie()"></div>
+			<div id="mixto" class="circuito"><p class="titulo">Circuito Mixto</p><img id="img_mixto" src="recursos/mixto_1.png" width="50%" onmouseover="mensaje_mixto();sound()" onmouseout="mensaje_mixto2()" onclick="cargar_mixto()" onclick="cargar_mixto()"></div>
+			<div id="paralelo" class="circuito"><p class="titulo">Circuito en Paralelo</p><img id="img_paralelo" src="recursos/paralelo_1.png" width="50%" onmouseover="mensaje_paralelo() ; sound()" onmouseout="mensaje_paralelo2()" onclick="cargar_paralelo()"></div>
+			<div id="serie" class="circuito"><p class="titulo">Circuito en Serie</p><img id="img_serie" src="recursos/serie_1.png" onmouseover="mensaje_serie(); sound();" width="50%" onmouseout="mensaje_serie2()" onclick="cargar_serie()"></div>
 			
 
 		</div>
 		<div id="mensaje_1" style="width:40%" hidden></div>
 
-<object  style="width: 100%; height: 100%;" hidden></object>
+<object   hidden></object><br>
 		<button id="atras" onclick="atras()" hidden>Atras</button>
 		<button id="repetir" hidden>Repetir</button>
 	</div>
-	    
+
 </body>
 </html>
