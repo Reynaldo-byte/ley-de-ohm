@@ -29,6 +29,13 @@
 		<button id="atras" onclick="atras()" hidden>Atras</button>
 		<button id="repetir" hidden>Repetir</button>
 	</div>
-
+<script type="text/javascript">
+	document.getElementById("mixto").addEventListener("touchstart","mensaje_mixto");
+	document.getElementById("serie").addEventListener("touchstart","mensaje_serie");
+	document.getElementById("paralelo").addEventListener("touchstart","mensaje_paralelo");
+		document.getElementById("mixto").addEventListener("touchend","mensaje_mixto2");
+	document.getElementById("serie").addEventListener("touchend","mensaje_serie2");
+	document.getElementById("paralelo").addEventListener("touchstend","mensaje_paralelo2");
+	</script>
 </body>
 </html>
