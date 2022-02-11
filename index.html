@@ -12,30 +12,31 @@
     </div>
 	<script src="script.js"></script>
 		    <div id="aviso-movil-horizontal">
-			<p> Para disfrutar de una mejor experiencia rota tu dispositivo</p>
-			    <img src="recursos/rotate.gif"/></div>
+			<p> Para disfrutar de una mejor experiencia rota tu dispositivo</p></div>
+    <img src="recursos/rotate.gif"/>
 	<div id="contenido" onmouseover="audio2.play();audio2.loop='true'">
 		<div id="encabezado" >Circuitos:Ley de Ohm<br><button id="siguiente" onclick="empezar()" >Siguiente ➤➤</button></div>
 		<div id="menu" hidden>
-			<div id="mixto" class="circuito"><p class="titulo">Circuito Mixto</p><img id="img_mixto" src="recursos/mixto_1.png" width="50%" onmouseover="mensaje_mixto();sound()" onmouseout="mensaje_mixto2()" onclick="cargar_mixto()" onclick="cargar_mixto()"></div>
-			<div id="paralelo" class="circuito"><p class="titulo">Circuito en Paralelo</p><img id="img_paralelo" src="recursos/paralelo_1.png" width="50%" onmouseover="mensaje_paralelo() ; sound()" onmouseout="mensaje_paralelo2()" onclick="cargar_paralelo()"></div>
-			<div id="serie" class="circuito"><p class="titulo">Circuito en Serie</p><img id="img_serie" src="recursos/serie_1.png" onmouseover="mensaje_serie(); sound();" width="50%" onmouseout="mensaje_serie2()" onclick="cargar_serie()"></div>
+			<p class="titulo">Circuito Mixto</p><img id="img_mixto" src="recursos/mixto_1.png" width="50%" onmouseover="mensaje_mixto();sound()" onmouseout="mensaje_mixto2()" onclick="cargar_mixto()" onclick="cargar_mixto()">
+			<p class="titulo">Circuito en Paralelo</p><img id="img_paralelo" src="recursos/paralelo_1.png" width="50%" onmouseover="mensaje_paralelo() ; sound()" onmouseout="mensaje_paralelo2()" onclick="cargar_paralelo()">
+			<p class="titulo">Circuito en Serie</p><img id="img_serie" src="recursos/serie_1.png" onmouseover="mensaje_serie(); sound();" width="50%" onmouseout="mensaje_serie2()" onclick="cargar_serie()">
 			
 
 		</div>
 		<div id="mensaje_1" style="width:40%" hidden></div>
 
-<object   hidden></object><br>
+<div id="mixto" hidden>
+	<video id="v-mixto" src="recursos/mixto.mp4"></video>
+</div>
+<div id="serie" hidden>
+	<video id="v-serie" src="serie.mp4"></video>
+</div>
+<div id="paralelo" hidden>
+	<video  id="v-paralelo" src="paralelo.mp4"></video>
+</div><br>
 		<button id="atras" onclick="atras()" hidden>Atras</button>
 		<button id="repetir" hidden>Repetir</button>
 	</div>
-<script type="text/javascript">
-	document.getElementById("mixto").addEventListener("touchstart","mensaje_mixto");
-	document.getElementById("serie").addEventListener("touchstart","mensaje_serie");
-	document.getElementById("paralelo").addEventListener("touchstart","mensaje_paralelo");
-		document.getElementById("mixto").addEventListener("touchend","mensaje_mixto2");
-	document.getElementById("serie").addEventListener("touchend","mensaje_serie2");
-	document.getElementById("paralelo").addEventListener("touchstend","mensaje_paralelo2");
-	</script>
+
 </body>
 </html>

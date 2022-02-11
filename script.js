@@ -15,7 +15,7 @@ function sound() {
 }
 function mensaje_mixto() {
 		document.getElementById("mensaje_1").removeAttribute("hidden");
-	document.getElementById("mensaje_1").innerHTML="<p class=titulo>Circuito Mixto</p><p>Es una combinación de varios elementos conectados tanto en paralelo como en serie, estos pueden colocarse de la manera que sea siempre y cuando se utilicen los dos diferentes sistemas de elementos, tanto en paralelo como en serie.</p>";
+	document.getElementById("mensaje_1").innerHTML="<p class=titulo>Circuito mixto</p><p>Es una combinación de varios elementos conectados tanto en paralelo como en serie, estos pueden colocarse de la manera que sea siempre y cuando se utilicen los dos diferentes sistemas de elementos, tanto en paralelo como en serie.</p>";
 	
 	document.getElementById("img_mixto").style="width:60%"
 }
@@ -53,8 +53,12 @@ document.getElementById("siguiente").setAttribute("hidden","");
 function cargar_serie() {
 document.getElementById("mensaje_1").setAttribute("hidden","");
 	document.getElementById("menu").setAttribute("hidden","");
-		document.querySelector("object").removeAttribute("hidden");
-	document.querySelector("object").setAttribute("data","serie.html");
+		document.getElementById("mixto").setAttribute('hidden','');
+	document.getElementById('serie').removeAttribute("hidden");
+		document.getElementById('paralelo').setAttribute('hidden','');
+
+document.getElementById('v-serie').play();
+
 	document.getElementById("atras").removeAttribute("hidden");
 	document.getElementById("repetir").removeAttribute("hidden");
 	document.getElementById("repetir").setAttribute("onclick","cargar_serie()");
@@ -62,32 +66,45 @@ document.getElementById("mensaje_1").setAttribute("hidden","");
 }
 function cargar_paralelo() {
 	document.getElementById("mensaje_1").setAttribute("hidden","");
-	document.querySelector("object").removeAttribute("hidden");
+	document.getElementById("mixto").setAttribute('hidden','');
+	document.getElementById('serie').setAttribute('hidden','');
+		document.getElementById('paralelo').removeAttribute("hidden");
 document.getElementById("repetir").removeAttribute("hidden");
 	document.getElementById("repetir").setAttribute("onclick","cargar_paralelo()");
 	document.getElementById("menu").setAttribute("hidden","");
-	document.querySelector("object").setAttribute("data","paralelo.html");
+
+document.getElementById('v-paralelo').play();
 	document.getElementById("atras").removeAttribute("hidden");
+
 
 	// body...
 }
 function cargar_mixto() {
 	document.getElementById("mensaje_1").setAttribute("hidden","");
-	document.querySelector("object").removeAttribute("hidden");
+	document.getElementById("mixto").removeAttribute("hidden");
+	document.getElementById('serie').setAttribute('hidden','');
+		document.getElementById('paralelo').setAttribute('hidden','');
 document.getElementById("repetir").removeAttribute("hidden");
 	document.getElementById("repetir").setAttribute("onclick","cargar_mixto()");
 	document.getElementById("menu").setAttribute("hidden","");
-	document.querySelector("object").setAttribute("data","mixto.html")
+document.getElementById('v-mixto').play();
+
 document.getElementById("atras").removeAttribute("hidden");
 	// body...
 }
 function atras() {
-	document.querySelector("object").setAttribute("hidden","");
 		document.getElementById("atras").setAttribute("hidden","");
 			document.getElementById("repetir").setAttribute("hidden","");
-document.querySelector("object").setAttribute("data","");
+document.getElementById('v-mixto').pause();
+document.getElementById('v-serie').pause();
+document.getElementById('v-paralelo').pause();
+document.getElementById('v-mixto').currentTime=0;
+document.getElementById('v-serie').currentTime=0;
+document.getElementById('v-paralelo').currentTime=0;
 document.getElementById("menu").removeAttribute("hidden");
-	// body...
+	document.getElementById("mixto").setAttribute('hidden','');
+	document.getElementById('serie').setAttribute('hidden','');
+		document.getElementById('paralelo').setAttribute('hidden','');
 }
 
 //inicio animacion 1
