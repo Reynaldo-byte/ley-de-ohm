@@ -68,7 +68,7 @@ body{
                 font-size: 22px;
                 border: groove 4px red;
             }
-    #aviso-movil-horizontal { display: none; }
+  
     @media only screen and (orientation:portrait) {
         #contenido { display:none; }
         #aviso-movil-horizontal { z-index=0;
