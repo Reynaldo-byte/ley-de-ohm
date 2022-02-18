@@ -13,6 +13,8 @@ object{
 .titulo{
 	font-weight: bold;
 	font-size: 1.3rem;
+	background-color: rgba(255, 255, 255, 0.7);
+	border-radius: 1rem;
 }
 
 body{
