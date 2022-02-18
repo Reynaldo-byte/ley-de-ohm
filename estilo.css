@@ -10,6 +10,8 @@ object{
 	text-align: center;
 	border-style: solid;
 }
+video
+{border-radius:1rem;}
 .titulo{
 	font-weight: bold;
 	font-size: 1.3rem;
