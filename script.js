@@ -46,6 +46,7 @@ function mensaje_serie2() {
 	// body...
 }
 function empezar() {
+	document.getElementById("contenido").removeAttribute('style')
 	document.getElementById("menu").removeAttribute("hidden");
 document.getElementById("siguiente").setAttribute("hidden","");
 	// body...
@@ -56,15 +57,15 @@ document.getElementById("mensaje_1").setAttribute("hidden","");
 		document.getElementById("mixto").setAttribute('hidden','');
 	document.getElementById('serie').removeAttribute("hidden");
 		document.getElementById('paralelo').setAttribute('hidden','');
-
+	audio2.pause();
 document.getElementById('v-serie').play();
-
+	document.getElementById("contenido").removeAttribute('style')
 	document.getElementById("atras").removeAttribute("hidden");
 	document.getElementById("repetir").removeAttribute("hidden");
 	document.getElementById("repetir").setAttribute("onclick","cargar_serie()");
 	// body...
 }
-function cargar_paralelo() {
+function cargar_paralelo() {	document.getElementById("contenido").removeAttribute('style')
 	document.getElementById("mensaje_1").setAttribute("hidden","");
 	document.getElementById("mixto").setAttribute('hidden','');
 	document.getElementById('serie').setAttribute('hidden','');
@@ -72,14 +73,14 @@ function cargar_paralelo() {
 document.getElementById("repetir").removeAttribute("hidden");
 	document.getElementById("repetir").setAttribute("onclick","cargar_paralelo()");
 	document.getElementById("menu").setAttribute("hidden","");
-
+	audio2.pause();
 document.getElementById('v-paralelo').play();
 	document.getElementById("atras").removeAttribute("hidden");
 
 
 	// body...
 }
-function cargar_mixto() {
+function cargar_mixto() {	document.getElementById("contenido").removeAttribute('style')
 	document.getElementById("mensaje_1").setAttribute("hidden","");
 	document.getElementById("mixto").removeAttribute("hidden");
 	document.getElementById('serie').setAttribute('hidden','');
@@ -88,7 +89,7 @@ document.getElementById("repetir").removeAttribute("hidden");
 	document.getElementById("repetir").setAttribute("onclick","cargar_mixto()");
 	document.getElementById("menu").setAttribute("hidden","");
 document.getElementById('v-mixto').play();
-
+	audio2.pause();
 document.getElementById("atras").removeAttribute("hidden");
 	// body...
 }
@@ -97,6 +98,7 @@ function atras() {
 			document.getElementById("repetir").setAttribute("hidden","");
 document.getElementById('v-mixto').pause();
 document.getElementById('v-serie').pause();
+audio2.play();
 document.getElementById('v-paralelo').pause();
 document.getElementById('v-mixto').currentTime=0;
 document.getElementById('v-serie').currentTime=0;

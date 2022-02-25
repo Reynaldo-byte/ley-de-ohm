@@ -6,35 +6,33 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
-<body>
+<body onload="">
 <div style="position: absolute; top: 0px;">
       <img src="recursos/img-foot.png" alt="logo: escuela nueva">
     </div>
 	<script src="script.js"></script>
-		    <div id="aviso-movil-horizontal">    <img src="recursos/rotate.gif"/>
+		    <div id="aviso-movil-horizontal">
+		    	<img src="recursos/rotate.gif"/>
 			<p> Para disfrutar de una mejor experiencia rota tu dispositivo</p></div>
-
-	<div id="contenido" onmouseover="audio2.play();audio2.loop='true'">
-		<div id="encabezado" >Circuitos:Ley de Ohm<br><button id="siguiente" onclick="empezar()" >Siguiente ➤➤</button></div>
+    
+	<div id="contenido" onclick="audio2.play();" style="margin-top:20% ;">
+		<div id="encabezado" >Circuitos:Ley de Ohm<br><p>A continuación da clic sobre uno de los circuitos para ver como resolverlos.</p><br><button onmouseover="sound();" id="siguiente" onclick="empezar()" >Siguiente ➤➤</button></div>
 		<div id="menu" hidden>
-			<p class="titulo">Circuito Mixto</p><img class="circuito" id="img_mixto" src="recursos/mixto_1.png" width="50%" onmouseover="mensaje_mixto();sound()" onmouseout="mensaje_mixto2()" onclick="cargar_mixto()" onclick="cargar_mixto()">
-			<p class="titulo">Circuito en Paralelo</p><img class="circuito" id="img_paralelo" src="recursos/paralelo_1.png" width="50%" onmouseover="mensaje_paralelo() ; sound()" onmouseout="mensaje_paralelo2()" onclick="cargar_paralelo()">
-			<p class="titulo">Circuito en Serie</p><img class="circuito" id="img_serie" src="recursos/serie_1.png" onmouseover="mensaje_serie(); sound();" width="50%" onmouseout="mensaje_serie2()" onclick="cargar_serie()">
+			<p class="titulo">Circuito Mixto</p><img id="img_mixto" class="circuito" src="recursos/mixto_1.png" width="50%" onmouseover="mensaje_mixto();sound()" onmouseout="mensaje_mixto2()" onclick="cargar_mixto()" onclick="cargar_mixto();audio2.pause()">
+			<p class="titulo">Circuito en Paralelo</p><img id="img_paralelo" class="circuito" src="recursos/paralelo_1.png" width="50%" onmouseover="mensaje_paralelo() ;  sound()" onmouseout="mensaje_paralelo2()" onclick="cargar_paralelo();audio2.pause()">
+			<p class="titulo">Circuito en Serie</p><img id="img_serie" class="circuito" src="recursos/serie_1.png" onmouseover="mensaje_serie(); sound();" width="50%" onmouseout="mensaje_serie2()" onclick="cargar_serie();audio2.pause()">
 			
 
 		</div>
 		<div id="mensaje_1" style="width:40%" hidden></div>
 
 <div id="mixto" hidden>
-	<br>
-	<video id="v-mixto" src="mixto.mp4"></video>
+	<video id="v-mixto" src="recursos/mixto.mp4"></video>
 </div>
 <div id="serie" hidden>
-	<br>
 	<video id="v-serie" src="serie.mp4"></video>
 </div>
 <div id="paralelo" hidden>
-	<br>
 	<video  id="v-paralelo" src="paralelo.mp4"></video>
 </div><br>
 		<button id="atras" onclick="atras()" hidden>Atras</button>

@@ -10,13 +10,10 @@ object{
 	text-align: center;
 	border-style: solid;
 }
-video
-{border-radius:1rem;}
 .titulo{
 	font-weight: bold;
 	font-size: 1.3rem;
-	background-color: rgba(255, 255, 255, 0.7);
-	border-radius: 1rem;
+
 }
 
 body{
@@ -24,14 +21,17 @@ body{
 	background-image: url('fondo.png');
 	}
 #encabezado{
-	font-size: 2.5rem;
+	font-size: 4rem;
 	font-weight: bold;
-	background-color: rgba(255, 255, 255, 0.7);
+	background-color: rgba(0, 0, 0, 0.3);
 	border-radius: 1rem;
 	width: 50%;
+	color: white;
+	text-shadow: 1px 2px 2px red;
 	margin: auto;
 }
 .circuito{
+	padding: 0.3rem;
 	background-color: rgba(180, 243, 178, 0.4);
 	border-style: solid;
 	border-radius: 1rem;
@@ -47,6 +47,11 @@ body{
 	width: 40%;
 	background-color: rgba(221, 243, 178, 0.5);
 }
+#encabezado p{
+color: #83ffe2;
+    text-shadow: none;
+    font-size: 1.3rem;
+}
 #mensaje_1,#mensaje_2,#mensaje_3{
 	margin-top: 10%;
 	font-size: 1.5rem;
@@ -55,35 +60,29 @@ body{
 	border-style: solid;
 	text-align: center;
 }
+           button{
 
-         button {background-image: linear-gradient(to right, #4CA1AF 0%, #C4E0E5  51%, #4CA1AF  100%)}
-         button {
-            margin: 10px;
-            padding: 15px 45px;
-            text-align: center;
-            text-transform: uppercase;
-            transition: 0.5s;
-            background-size: 200% auto;
-            color: white;            
-            box-shadow: 0 0 20px #eee;
-            border-radius: 10px;
-         
-          }
+           
+      	         background-color:#474548;
+                color: white;
+                font-size: 20px;
+                text-align: center;
+                font-weight: bolder;
+                padding: 3px;
+                border: solid 2px black;
 
-          button:hover {
-            background-position: right center; /* change the direction of the change here */
-            color: #fff;
-            text-decoration: none;
-          }
-         
-  
+            }
+             button:hover{ /* Estilo que se activa al pasar el puntero sobre el boton */
+                background-color: #dfb34f;
+                font-size: 22px;
+                border: groove 4px red;
+            }
+    #aviso-movil-horizontal { display: none; }
     @media only screen and (orientation:portrait) {
         #contenido { display:none; }
         #aviso-movil-horizontal { z-index=0;
           display:block;
       font-size: 1rem;
-		background-color:rgba(255,255,255,0.6);
-		border-radius:1rem;
                 text-align: center;
                 font-weight: bolder;}
       
