@@ -17,7 +17,7 @@ function mensaje_mixto() {
 		document.getElementById("mensaje_1").removeAttribute("hidden");
 	document.getElementById("mensaje_1").innerHTML="<p class=titulo>Circuito mixto</p><p>Es una combinación de varios elementos conectados tanto en paralelo como en serie, estos pueden colocarse de la manera que sea siempre y cuando se utilicen los dos diferentes sistemas de elementos, tanto en paralelo como en serie.</p>";
 	
-	document.getElementById("img_mixto").style="width:60%"
+	document.getElementById("img_mixto").style="width:55%"
 }
 function mensaje_mixto2() {
 	document.getElementById("img_mixto").style="width:50%"
@@ -26,13 +26,13 @@ function mensaje_mixto2() {
 }
 function mensaje_paralelo(){	document.getElementById("mensaje_1").removeAttribute("hidden");
 	document.getElementById("mensaje_1").innerHTML="<p class=titulo>Circuito en Paralelo</p><p>Es una conexión donde los puertos de entrada de todos los dispositivos (generadores, resistencias, condensadores, etc.) conectados coincidan entre si, lo mismos que sus terminales de salida.</p>";
-	document.getElementById("img_paralelo").style="width:60%"
+	document.getElementById("img_paralelo").style="width:55%"
 }
 function mensaje_serie() {
 		document.getElementById("mensaje_1").removeAttribute("hidden");
 	document.getElementById("mensaje_1").innerHTML="<p class=titulo>Circuito en Serie</p><p>Es una configuración de conexión en la que los bornes o terminales de los dispositivos (generadores, resistencias, condensadores, interruptores, entre otros.) se conectan secuencialmente.</p>";
 	// body...
-	document.getElementById("img_serie").style="width:60%"
+	document.getElementById("img_serie").style="width:55%"
 }
 function mensaje_paralelo2() {
 
