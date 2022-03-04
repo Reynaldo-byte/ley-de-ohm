@@ -15,6 +15,16 @@ object{
 	font-size: 1.3rem;
 
 }
+.titulo1{
+font-size: 1.5rem;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+    width: 50%;
+    color: white;
+    text-shadow: 1px 2px 2px red;
+    margin: auto;
+}
 
 body{
 	font-family: calibri;
